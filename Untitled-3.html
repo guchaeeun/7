@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 힐링송</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HERO 영역 -->
+    <header class="hero">
+        <h1>나만의 힐링송 플레이리스트</h1>
+        <p>상황별로 듣는 힐링 음악, 카테고리를 선택하세요</p>
+
+        <div class="category-buttons">
+            <button onclick="showSection('breakup')">이별할 때</button>
+            <button onclick="showSection('walk')">산책할 때</button>
+            <button onclick="showSection('snow')">눈 올 때</button>
+            <button onclick="showSection('summer')">더울 때</button>
+        </div>
+    </header>
+
+    <!-- ======= 섹션: 이별할 때 ======= -->
+    <section id="breakup" class="music-section">
+        <h2>이별할 때 듣는 노래</h2>
+        <div class="card-container">
+            <a class="card" href="https://www.youtube.com/watch?v=jT27daayn_k" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124710953_01.jpg" alt="">
+                <h3>임한별 – 이별하러 가는 길</h3>
+            </a>
+            <a class="card" href="https://www.youtube.com/watch?v=hrO-BgLjJ-Q" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124710953_02.jpg" alt="">
+                <h3>윤하 – 먹구름</h3>
+            </a>
+            <a class="card" href="https://www.youtube.com/watch?v=EUFSDbnZ1o4" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124600178_01.jpg" alt="">
+                <h3>토이 (권진아) – 그녀가 말했다</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- ======= 섹션: 산책할 때 ======= -->
+    <section id="walk" class="music-section">
+        <h2>산책할 때 듣는 노래</h2>
+        <div class="card-container">
+            <a class="card" href="https://youtu.be/nej08HFsp7A" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124600178_02.jpg" alt="">
+                <h3>Big Void – 실리카겔</h3>
+            </a>
+            <a class="card" href="https://youtu.be/iAeeTin1uCA" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124752114_01.jpg" alt="">
+                <h3>백예린 – 산책</h3>
+            </a>
+            <a class="card" href="https://youtu.be/t54PzeNJDIA" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124752114_02.jpg" alt="">
+                <h3>오월오일 – Wish</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- ======= 섹션: 눈 올 때 ======= -->
+    <section id="snow" class="music-section">
+        <h2>눈 올 때 듣는 노래</h2>
+        <div class="card-container">
+            <a class="card" href="https://www.youtube.com/watch?v=5ZB9JLfIw_Q" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124752114.jpg" alt="">
+                <h3>프로미스나인 – 하얀 그리움</h3>
+            </a>
+            <a class="card" href="https://www.youtube.com/watch?v=a5oeNwoCi-s" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124725297_01.jpg" alt="">
+                <h3>40 – 듣는 편지</h3>
+            </a>
+            <a class="card" href="https://www.youtube.com/watch?v=tnAxZipkuWw" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124725297_02.jpg" alt="">
+                <h3>소코도모 – 회전목마</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- ======= 섹션: 더울 때 ======= -->
+    <section id="summer" class="music-section">
+        <h2>더울 때 듣는 노래</h2>
+        <div class="card-container">
+            <a class="card" href="https://youtu.be/UDyPp9bkfD0" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124725297_02.jpg" alt="">
+                <h3>DPR LIVE – Martini Blue</h3>
+            </a>
+            <a class="card" href="https://youtu.be/9OXAoESmsRE" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124725297_01.jpg" alt="">
+                <h3>TXT – 그냥 괴물을 살려두면 안 되는 걸까?</h3>
+            </a>
+            <a class="card" href="https://youtu.be/eG90LtY98yg" target="_blank">
+                <img src="./images/KakaoTalk_20251212_124710953_01.jpg" alt="">
+                <h3>샵 – Sweety</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>제작자 정보</h3>
+        <p>이메일: <strong>youdh041009@gmail.com</strong></p>
+    </footer>
+
+    <!-- JS: 섹션 전환 -->
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.music-section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+        showSection('breakup'); // 초기 화면
+    </script>
+
+</body>
+</html>
